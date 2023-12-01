@@ -1,0 +1,230 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(162, 169, 175);
+            font-family: segoe ui;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            display: grid;
+            place-items: center;
+        }
+        .item1{
+            width: 80vw;
+            height: max-content;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 20px;
+            background-color: red;
+        }
+        .item1pad{
+            padding-top: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 10px;
+        }
+        h2{
+            font-size: 40px;
+            font-family:arial black;
+            font-weight: bold;
+        }
+        input{
+            width: 100%;
+            height: 30px;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        #result1{
+            width: 100%;
+            height: 80px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 14px;
+            text-align: left;
+            font-size: 25px;
+            font-weight: bold;
+            border: 3px solid grey;
+        }
+        #result2{
+            width: 100%;
+            height: 80px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 14px;
+            text-align: left;
+            font-size: 25px;
+            font-weight: bold;
+            border: 3px solid grey;
+        }
+        #result3{
+            width: 100%;
+            height: 80px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 14px;
+            text-align: left;
+            font-size: 25px;
+            font-weight: bold;
+            border: 3px solid grey;
+        }
+        #result4{
+            width: 100%;
+            height: 80px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 14px;
+            text-align: left;
+            font-size: 25px;
+            font-weight: bold;
+            border: 3px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <div class="item1">
+            <div class="item1pad" onchange="term1()">
+              <h2>Terms of an Arithmetic Progression (A.P)</h2><br>
+              <a style="font-size:25px;float:left;font-weight:bold;">First Term(a):</a><br>
+              <input type="number" placeholder="Enter your first term" id="first_t"><br><br>
+
+              
+              <a style="font-size:25px;float:left;font-weight:bold;">Common Difference(d):</a><br>
+              <input type="number" placeholder="Enter your common differnce" id="common_d"><br><br>
+
+              
+              <a style="font-size:25px;float:left;font-weight:bold;">Number of Term(n):</a><br>
+              <input type="number" placeholder="Enter your number of term" id="no_term"><br><br>
+
+              
+              <a style="font-size:25px;float:left;font-weight:bold;">Result:</a><br>
+              <div id="result1">
+                 
+              </div><br>
+            </div>
+        </div>
+
+        <div class="item1">
+            <div class="item1pad" onchange="term2()">
+              <h2>Common Difference (d)</h2><br>
+              <a style="font-size:25px;float:left;font-weight:bold;">First Term(a):</a><br>
+              <input type="number" placeholder="Enter your first term" id="first_t1"><br><br>
+
+              
+              <a style="font-size:25px;float:left;font-weight:bold;">Arithmetic Progression(A.P):</a><br>
+              <input type="number" placeholder="Enter your A.P" id="ap1"><br><br>
+
+              
+              <a style="font-size:25px;float:left;font-weight:bold;">Number of Term(n):</a><br>
+              <input type="number" placeholder="Enter your number of term" id="no_term1"><br><br>
+
+              
+              <a style="font-size:25px;float:left;font-weight:bold;">Result:</a><br>
+              <div id="result2">
+                 
+              </div><br>
+            </div>
+        </div>
+
+        <div class="item1">
+            <div class="item1pad" onchange="term3()">
+              <h2>Sum Of A.P Series</h2><br>
+              <a style="font-size:25px;float:left;font-weight:bold;">First Term(a):</a><br>
+              <input type="number" placeholder="Enter your first term" id="first_t3"><br><br>
+
+              
+              <a style="font-size:25px;float:left;font-weight:bold;">Common Difference(d):</a><br>
+              <input type="number" placeholder="Enter your common difference" id="common_d2"><br><br>
+
+              
+              <a style="font-size:25px;float:left;font-weight:bold;">Sum of Term(n):</a><br>
+              <input type="number" placeholder="Enter your number of term" id="sum_term1"><br><br>
+
+              
+              <a style="font-size:25px;float:left;font-weight:bold;">Result:</a><br>
+              <div id="result3">
+                 
+              </div><br>
+            </div>
+        </div>
+
+        <div class="item1">
+            <div class="item1pad" onchange="term4()">
+              <h2>Number Of Term in Sum of series With Last Term</h2><br>
+              <a style="font-size:25px;float:left;font-weight:bold;">First Term(a):</a><br>
+              <input type="number" placeholder="Enter your first term" id="first_t4"><br><br>
+
+              
+              <a style="font-size:25px;float:left;font-weight:bold;">Sum of Term(n):</a><br>
+              <input type="number" placeholder="Enter your number of term" id="sum_term2"><br><br>
+
+              <a style="font-size:25px;float:left;font-weight:bold;">Last Term(l):</a><br>
+              <input type="number" placeholder="Enter your number of term" id="last_term"><br><br>
+
+
+              
+              <a style="font-size:25px;float:left;font-weight:bold;">Result:</a><br>
+              <div id="result4">
+                 
+              </div><br>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function term1(){
+            var first_term = parseInt(document.getElementById('first_t').value);
+            var common_d =parseInt(document.getElementById('common_d').value);
+            var number_term = parseInt(document.getElementById('no_term').value);
+
+            var ans1= number_term - 1;
+            var ans2 = ans1 * common_d;
+            var ans3 = first_term + ans2;
+            document.getElementById('result1').innerHTML = 'The answer is '+ ans3;
+        }
+        
+        function term2(){
+            var first_term = parseInt(document.getElementById('first_t1').value);
+            var ap =parseInt(document.getElementById('ap1').value);
+            var number_term = parseInt(document.getElementById('no_term1').value);
+
+            var ans1= number_term - 1;
+            var ans2 = ap  - first_term;
+            var ans3 = ans2 / ans1;
+            document.getElementById('result2').innerHTML = 'Your common difference is '+ ans3;
+        }
+        
+        function term3(){
+            var first_term = parseInt(document.getElementById('first_t3').value);
+            var common_d2 =parseInt(document.getElementById('common_d2').value);
+            var sum_term = parseInt(document.getElementById('sum_term1').value);
+
+            var ans1= sum_term - 1;
+            var ans2 = ans1 * common_d2 ;
+            var ans3 = 2 * first_term;
+            var ans4 = ans2 + ans3;
+            var ans5 = sum_term / 2;
+            var final = ans4 * ans5
+            document.getElementById('result3').innerHTML = 'Your sum of the first '+  sum_term  + ' '+'term is ' + final;
+        }
+         
+        function term4(){
+            var first_term = parseInt(document.getElementById('first_t4').value);
+            var sum_term = parseInt(document.getElementById('sum_term2').value);
+            var last_term = parseInt(document.getElementById('last_term').value);
+
+            var ans1 = first_term + last_term;
+            var ans2 = 2 * sum_term;
+            var ans3 = ans2 / ans1; 
+            document.getElementById('result4').innerHTML = 'Your sum of the first '+  sum_term  + ' '+'term is ' + ans3;
+        }
+    </script>
+</body>
+</html>
